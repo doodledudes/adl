@@ -15,8 +15,8 @@ var debug = require('gulp-debug');
 var changed = require('gulp-changed');
 var gutil = require('gulp-util');
 
-var root  = '../ttstatic.github.io/';
-var dir   = 'adl'; // you may change this.
+var root  = './';
+var dir   = 'public'; // you may change this.
 
 var paths = {
   // This must be in the right order, so linked files are processed first.
