@@ -1,0 +1,347 @@
+extends ./layout/_admin.pug
+
+block usertype
+  a.navbar-item(href="admin-dashboard.html")
+    | Admin
+  //- a
+  a.navbar-item.is-active(href="manager-dashboard.html")
+    | Manager
+  //- a
+  a.navbar-item(href="agent-dashboard.html")
+    | Agent
+  //- a
+//- block usertype
+
+block aside
+  li
+    a(href='manager-dashboard.html')
+      i.fas.fa-tachometer-alt
+      | &nbsp;Dashboard
+    //- a
+  //- li
+  li
+    a(href="")
+      i.fas.fa-cube
+      | &nbsp;In Creation
+    //- a
+  //- li
+  li
+    a(href="")
+      i.fab.fa-wpforms
+      | &nbsp;In Workflow
+    //- a
+  //- li
+  li
+    a(href="")
+      i.fas.fa-check
+      | &nbsp;Completed Forms
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-chart-bar
+      | &nbsp;My Forms / Templates
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-users-cog
+      | &nbsp;My Merges
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-home
+      | &nbsp;My Properties
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-cogs
+      | &nbsp;Upcoming Actions
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-tasks
+      | &nbsp;My Lists
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-users
+      | &nbsp;Create / Mgr Users
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-chart-line
+      | &nbsp;Reports
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-project-diagram
+      | &nbsp;Workflow Manage
+    //- a
+  //- li
+//- block aside
+
+block content
+  
+  .admin-wrap
+    .container.is-fluid
+      
+      section
+        .columns
+          .column
+            .content
+              h4.title.is-4 My Tasks
+            //- content
+            .card
+              .card-content
+                .tabs
+                  ul
+                    li.is-active
+                      a(data-target="tabInWorkflow") In Workflow
+                    //- li
+                    li
+                      a(data-target="tabMyAgents") My Agents
+                    //- li
+                    li
+                      a(data-target="tabMyProperties") My Properties
+                    //- li
+                    li
+                      a(data-target="tabUpcoming") Upcoming
+                    //- li
+                  //- ul
+                //- tabs
+                .tab-content.is-active#tabInWorkflow
+                  table.table.is-striped.is-fullwidth
+                    thead
+                      tr
+                        th Property
+                        th Package
+                        th Form
+                        th Status
+                        th Owner
+                        th
+                      //- tr
+                    //- thead
+                    tbody
+                      tr
+                        td 12TishlerStWright
+                        td NSWPropertySales
+                        td EntryNotice
+                        td waitingapproval
+                        td Manager1
+                        td.has-text-right
+                          a.has-tooltip(href="", title="Approval")
+                            i.fas.fa-check
+                          //- a
+                        //- td
+                      //- tr
+                      tr
+                        td 100 Borburn St Sydney
+                        td NSW Property Mgt
+                        td Tenancy Application
+                        td waiting completion
+                        td Tenant
+                        td.has-text-right
+                          a.has-tooltip(href="", title="Message")
+                            i.fas.fa-envelope
+                          //- a
+                        //- td
+                      //- tr
+                    //- tbody
+                  //- table
+                //- tab-content
+                .tab-content#tabMyAgents
+                  h1 My Agents
+                //- tab-content
+                .tab-content#tabMyProperties
+                  h1 My Properties
+                //- tab-content
+                .tab-content#tabUpcoming
+                  h1 Upcoming
+                //- tab-content
+              //- card-content
+            //- card
+          //- column
+        //- columns
+        .columns
+          .column.is-4
+            .content
+              h4.title.is-4 Agent Statistics
+            //- content
+            .card
+              .card-content
+                .columns
+                  .column
+                    .field
+                      label.label Agent
+                      .control
+                        .select.is-100p
+                          select(onchange="fetchData(agentStatsChart, this)")
+                            option Select Agent
+                            option Jeffrey Dela Cruz
+                            option Laurence Hernandez
+                          //- select
+                        //- .select
+                      //- control
+                    //- field
+                  //- column
+                //- columns
+                .columns.is-multiline
+                  .column
+                    .field
+                      label.label From
+                      .control
+                        input.input(type="date", placeholder="")
+                      //- control
+                    //- field
+                  //- column
+                  .column
+                    .field
+                      label.label To
+                      .control
+                        input.input(type="date", placeholder="")
+                      //- control
+                    //- field
+                  //- column
+                //- columns
+                canvas#graphAgentStats
+              //- card-content
+            //- card
+          //- column
+          .column.is-4
+            .content
+              h4.title.is-4 Form Stats
+            //- content
+            .card
+              .card-content
+                .columns
+                  .column
+                    .field
+                      label.label Agent
+                      .control
+                        .select.is-100p
+                          select
+                            option Select dropdown
+                            option With options
+                          //- select
+                        //- .select
+                      //- control
+                    //- field
+                  //- column
+                //- columns
+                .columns.is-multiline
+                  .column
+                    .field
+                      label.label From
+                      .control
+                        input.input(type="date", placeholder="")
+                      //- control
+                    //- field
+                  //- column
+                  .column
+                    .field
+                      label.label To
+                      .control
+                        input.input(type="date", placeholder="")
+                      //- control
+                    //- field
+                  //- column
+                //- columns
+                table.table.is-striped.is-fullwidth
+                  thead
+                    tr
+                      th Form Name
+                      th Number
+                    //- tr
+                  //- thead
+                  tbody
+                    tr
+                      td Form A
+                      td 30
+                    //- tr
+                    tr
+                      td Form B
+                      td 24
+                    //- tr
+                    tr
+                      td Form C
+                      td 15
+                    //- tr
+                    tr
+                      td Form D
+                      td 8
+                    //- tr
+                    tr
+                      td Form E
+                      td 4
+                    //- tr
+                  //- tbody
+                //- table
+              //- card-content
+            //- card
+          //- column
+          .column.is-4
+            .content
+              h4.title.is-4 Quick Links
+            //- content
+            .card
+              .card-content
+                table.table.is-striped.is-fullwidth
+                  thead
+                    tr
+                      th Action
+                    //- tr
+                  //- thead
+                  tbody
+                    tr
+                      td Create User
+                    //- tr
+                    tr
+                      td Reports
+                    //- tr
+                    tr
+                      td Manage Templates
+                    //- tr
+                  //- tbody
+                //- table
+              //- card-content
+            //- card
+          //- column
+        //- columns
+      //- section
+    //- container
+  //- section
+
+block scripts
+  script.
+    function randomData(obj) {
+      var myData = [];
+      for(x = 1; x<=obj.length; x++) {
+        myData.push( Math.floor((Math.random() * 100) + 1) );
+      }
+      return myData;
+    }
+    function fetchData(chart, option) {
+      var arrObj = randomData(chart.data.datasets[0].data);
+      chart.data.datasets[0].data = arrObj;
+      if (!option.selectedIndex == 0) {
+        chart.update();
+      }
+    }
+    
+    var agentStatsChart = new Chart(document.getElementById("graphAgentStats"), {
+      "type": "pie",
+      "data": {
+        "labels": ["In Creation", "In Workflow", "Completed"],
+        "datasets": [{
+          "data": [300, 50, 100],
+          "backgroundColor": ["#3F4B75", "#727CA0", "#757782"]
+        }]
+      }
+    });

@@ -1,0 +1,186 @@
+extends ./layout/_admin.pug
+
+block aside
+  li
+    a(href='dashboard.html')
+      i.fas.fa-tachometer-alt
+      | &nbsp;Dashboard
+    //- a
+  //- li
+  li
+    a(href="form-packages.html")
+      i.fas.fa-cube
+      | &nbsp;In Creation
+    //- a
+  //- li
+  li
+    a(href="templates.html")
+      i.fab.fa-wpforms
+      | &nbsp;In Workflow
+    //- a
+  //- li
+  li
+    a(href="completed-forms.html")
+      i.fas.fa-check
+      | &nbsp;Completed Forms
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-chart-bar
+      | &nbsp;My Forms / Templates
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-users-cog
+      | &nbsp;My Merges
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-home
+      | &nbsp;My Properties
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-cogs
+      | &nbsp;Upcoming Actions
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-tasks
+      | &nbsp;My Lists
+    //- a
+  //- li
+//- block aside
+
+block content
+  
+  .admin-wrap
+    .container.is-fluid
+      
+      include ./includes/_search.pug
+      
+      br
+      
+      h4.title.is-4 Advanced Search
+      .box
+        .columns
+          .column
+            .field
+              .control
+                label.label Form Name
+                input.input(type="text", placeholder="", value="")
+              //- control
+            //- field
+          //- column
+          .column
+            .field
+              .control
+                label.label User
+                input.input(type="text", placeholder="", value="")
+              //- control
+            //- field
+          //- column
+          .column
+            .field
+              .control
+                label.label Form Content
+                input.input(type="text", placeholder="", value="")
+              //- control
+            //- field
+          //- column
+          .column.is-2
+            .field.is-grouped.is-grouped-centered
+              .control
+                label.label &nbsp;
+                a.button.is-info(href="")
+                  i.fas.fa-filter
+                  | &nbsp;Refine Search
+                //- a
+              //- control
+            //- field
+          //- column
+        //- columns
+      //- box
+      
+      br
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Form Name
+            th User
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Absent / Telephone Bidder Authority
+            td Arv Naidu
+            td -
+          //- tr
+          tr
+            td Agent's Authority To Exchange Contracts
+            td Rodan Luzuriaga
+            td -
+          //- tr
+          tr
+            td Annexure - Relevant and Material Facts Disclosure
+            td Dexter De Jesus
+            td -
+          //- tr
+          tr
+            td Auction &amp; Exclusive Agency Agreement for the Sale of Goods
+            td Phil Callender
+            td -
+          //- tr
+          tr
+            td Authority To Sign On Seller's Behalf (at an Auction)
+            td Jeremi Serrano
+            td -
+          //- tr
+          tr
+            td Bidder's Record 
+            td Shanley Evangelista
+            td -
+          //- tr
+        //- tbody
+      //- table
+      nav.pagination.is-centered(role="navigation", aria-label="pagination")
+        a.pagination-previous Previous
+        |   
+        a.pagination-next Next page
+        |   
+        ul.pagination-list
+          li
+            a.pagination-link(aria-label="Goto page 1") 1
+          //- li
+          li
+            span.pagination-ellipsis …
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 45") 45
+          //- li
+          li
+            a.pagination-link.is-current(aria-label="Page 46", aria-current="page") 46
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 47") 47
+          //- li
+          li
+            span.pagination-ellipsis …
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 86") 86
+          //- li
+        //- ul
+      //- nav
+    //- container
+  //- section
+
+block scripts
+  script.
+    

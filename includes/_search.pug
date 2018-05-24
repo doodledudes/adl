@@ -1,0 +1,28 @@
+.field.has-addons
+  .control.is-expanded
+    input.input.is-default.is-medium(type="text", placeholder="Please select a search category...")
+  //- control
+  .control
+    .dropdown.is-right
+      .dropdown-trigger
+        button.button.is-medium.is-success(aria-haspopup="true", aria-controls="dropdown-menu")
+          i.fas.fa-search
+          span &nbsp;Search
+          span.icon.is-small
+            i.fas.fa-angle-down(aria-hidden="true")
+          //- span
+        //- button
+      //- dropdown-trigger
+      #dropdown-menu.dropdown-menu(role="menu")
+        .dropdown-content
+          a.dropdown-item(href="#")
+            | Form Packages
+          //- a
+          a.dropdown-item
+            | Completed Forms
+          //- a
+        //- dropdown-content
+      //- dropdown-menu
+    //- dropdown
+  //- control
+//- field

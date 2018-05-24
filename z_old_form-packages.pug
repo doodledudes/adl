@@ -1,0 +1,203 @@
+extends ./layout/_admin.pug
+
+block aside
+  li
+    a(href='dashboard.html')
+      i.fas.fa-tachometer-alt
+      | &nbsp;Dashboard
+    //- a
+  //- li
+  li
+    a(href="form-packages.html")
+      i.fas.fa-cube
+      | &nbsp;In Creation
+    //- a
+  //- li
+  li
+    a(href="templates.html")
+      i.fab.fa-wpforms
+      | &nbsp;In Workflow
+    //- a
+  //- li
+  li
+    a(href="completed-forms.html")
+      i.fas.fa-check
+      | &nbsp;Completed Forms
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-chart-bar
+      | &nbsp;My Forms / Templates
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-users-cog
+      | &nbsp;My Merges
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-home
+      | &nbsp;My Properties
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-cogs
+      | &nbsp;Upcoming Actions
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-tasks
+      | &nbsp;My Lists
+    //- a
+  //- li
+//- block aside
+
+block content
+  
+  .admin-wrap
+    .container.is-fluid
+      
+      include ./includes/_search.pug
+      
+      br
+      
+      .field.is-grouped.is-grouped-left
+        .control
+          .dropdown
+            .dropdown-trigger
+              button.button(aria-haspopup="true", aria-controls="dropdown-menu")
+                span Select State
+                |       
+                span.icon.is-small
+                  i.fas.fa-angle-down(aria-hidden="true")
+                //- span
+              //- button
+            //- dropdown-trigger
+            #dropdown-menu.dropdown-menu(role="menu")
+              .dropdown-content
+                a.dropdown-item(href="#")
+                  | All States
+                //- a
+                a.dropdown-item.is-active
+                  | New South Wales
+                //- a
+                a.dropdown-item(href="#")
+                  | Queensland
+                //- a
+                a.dropdown-item(href="#")
+                  | South Australia
+                //- a
+                a.dropdown-item(href="#")
+                  | Tasmania
+                //- a
+                a.dropdown-item(href="#")
+                  | Victoria
+                //- a
+                a.dropdown-item(href="#")
+                  | Western Australia
+                //- a
+              //- dropdown-content
+            //- dropdown-menu
+          //- dropdown
+        //- control
+      //- field
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Title
+            th Description
+            th Version
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Additional Applicant Details Sheet
+            td -
+            td AU-NSW-RE-CM-030
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Additional Applicant Details Sheet - Retail Lease
+            td -
+            td AU-NSW-RE-CM-032
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Appointment of Contractor
+            td -
+            td AU-NSW-RE-CM-013
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Assignor's Disclosure Statement (Web Link Only)
+            td -
+            td AU-NSW-RE-CM-014
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Buyers Agency Agreement and Statement of Property Details
+            td -
+            td AU-NSW-RE-CM-019
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Car Parking Licence Agreement 
+            td -
+            td AU-NSW-RE-CM-028
+            th
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+        //- tbody
+      //- table
+      nav.pagination.is-centered(role="navigation", aria-label="pagination")
+        a.pagination-previous Previous
+        |   
+        a.pagination-next Next page
+        |   
+        ul.pagination-list
+          li
+            a.pagination-link(aria-label="Goto page 1") 1
+          //- li
+          li
+            span.pagination-ellipsis …
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 45") 45
+          //- li
+          li
+            a.pagination-link.is-current(aria-label="Page 46", aria-current="page") 46
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 47") 47
+          //- li
+          li
+            span.pagination-ellipsis …
+          //- li
+          li
+            a.pagination-link(aria-label="Goto page 86") 86
+          //- li
+        //- ul
+      //- nav
+    //- container
+  //- section
+
+block scripts
+  script.
+    

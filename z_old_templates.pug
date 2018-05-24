@@ -1,0 +1,221 @@
+extends ./layout/_admin.pug
+
+block aside
+  li
+    a(href='dashboard.html')
+      i.fas.fa-tachometer-alt
+      | &nbsp;Dashboard
+    //- a
+  //- li
+  li
+    a(href="form-packages.html")
+      i.fas.fa-cube
+      | &nbsp;In Creation
+    //- a
+  //- li
+  li
+    a(href="templates.html")
+      i.fab.fa-wpforms
+      | &nbsp;In Workflow
+    //- a
+  //- li
+  li
+    a(href="completed-forms.html")
+      i.fas.fa-check
+      | &nbsp;Completed Forms
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-chart-bar
+      | &nbsp;My Forms / Templates
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-users-cog
+      | &nbsp;My Merges
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-home
+      | &nbsp;My Properties
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-cogs
+      | &nbsp;Upcoming Actions
+    //- a
+  //- li
+  li
+    a
+      i.fas.fa-tasks
+      | &nbsp;My Lists
+    //- a
+  //- li
+//- block aside
+
+block content
+  
+  .admin-wrap
+    .container.is-fluid
+      
+      include ./includes/_search.pug
+      
+      br
+      .field.is-grouped.is-grouped-centered
+        .control
+          a.button.is-success.is-medium(href="")
+            | Create New Template&nbsp;
+            i.fas.fa-file-alt
+        //- control
+      //- field
+      hr
+      h4.title.is-4 Commercial Forms
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Form
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Additional Applicant Details Sheet
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Additional Applicant Details Sheet - Retail Lease
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Appointment of Contractor
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Assignor's Disclosure Statement (Web Link Only)
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Buyers Agency Agreement and Statement of Property Details
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Car Parking Licence Agreement
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+        //- tbody
+      //- table
+      h4.title.is-4 Employment Forms
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Form
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Fair Work Information Statement (Web Link Only) 
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Real Estate Industry Award 2010 (Web Link Only) 
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+        //- tbody
+      //- table
+      h4.title.is-4 General Forms
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Form
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Confidentiality Agreement - Prospective Buyers
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Confirmation of Receipt of Document/s 
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Electronic Transmission Consent 
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+        //- tbody
+      //- table
+      h4.title.is-4 Residential Property Management Forms
+      table.table.is-hoverable.card.is-fullwidth
+        thead
+          tr
+            th Form
+            th 
+          //- tr
+        //- thead
+        tbody
+          tr
+            td Actions Required by Agent
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Additional Applicant Details Sheet
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Agreement To Terminate A Management Agreement  
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Application for Tenancy  
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+          tr
+            td Application for Tenancy V2 (with 100pt ID &amp; Individual Applicant Details Sheet) 
+            th.has-text-right
+              a.button.is-light.is-small(href='view-package.html') View
+            //- th
+          //- tr
+        //- tbody
+      //- table
+    //- container
+  //- section
+
+block scripts
+  script.
+    

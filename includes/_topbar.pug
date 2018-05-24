@@ -1,0 +1,48 @@
+nav.navbar.is-dark.is-fixed-top.top-bar
+  .navbar-brand.is-hidden-desktop
+    .navbar-burger.burger.mobile-menu.is-hidden-desktop(@click='toggleMobileMenu()')
+      span
+      span
+      span
+    //- navbar-burger
+    a.navbar-item(href="")
+      img(src='assets/images/logo.png', alt='Digital Reign')
+    //- a
+    .navbar-burger.burger.menu-drop(data-target="navbarExampleTransparentExample")
+      i.fa.fa-angle-down
+    //- navbar-burger
+  //- navbar-brand
+  #navbarExampleTransparentExample.navbar-menu
+    .navbar-start
+      block usertype
+    //- navbar-start
+    .navbar-end
+      a.navbar-item.badge-icon(href="", data-counter="0")
+        .is-hidden-desktop Messages
+        i.fas.fa-envelope.is-hidden-touch
+      //- a
+      a.navbar-item.badge-icon(href="", data-counter="0")
+        .is-hidden-desktop Notifications
+        i.fas.fa-exclamation-triangle.is-hidden-touch
+      //- a
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link(href="")
+          i.fas.fa-user-circle
+          | &nbsp;Rodan Luzuriaga
+        //- a
+        .navbar-dropdown.is-boxed.is-right
+          a.navbar-item(href="")
+            | Profile
+          //- a
+          a.navbar-item(href="")
+            | Feedback / Contact Us
+          //- a
+          hr.navbar-divider
+          a.navbar-item(href="index.html")
+            | Log Out
+          //- a
+        //- navbar-dropdown
+      //- navbar-item
+    //- navbar-end
+  //- navbar-menu
+//- nav
